@@ -1,84 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="info">
-            <div class="date">
-                <div class="time" id="time">
-                    12:30 <span id="am-pm">PM</span>
-                </div>
-                <div class="date" id="date">Monday, 25 May
-
-                </div>
-                <div class="others" id="currentWeatherItems">
-
-                </div>
-
-            </div>
-            <div class="placeContainer">
-                <div class="timeZone" id="timeZone">Mexico/Monterrey</div>
-                <div id="country" class="country">MX</div>
-
-            </div>
-
-        </div>
-
+    <div class="search-button">
+        <label for="city-name">City:</label>
+        <input type="text" id="city-name" name="city-name">
+        <button id="search-button" class="search-button">Search</button>
     </div>
-    <div class="futureForecast">
-        <div class="today" id="currentTemperature">
-            <img src="./" alt="weatherIcon" class="weatherIcon">
-            <div class="other">
-                <div class="day">Monday</div>
-                <div class="temp">Night - 20C</div>
-                <div class="temp">Day 40C</div>
+    <!-- ! search History where the user will input the html and will be provided with the data that he requests. -->
 
-            </div>
-
-        </div>
-        <div class="weatherForecastItem">
-            <div class="day">Tuesday</div>
-            <img src="./" alt="weather icon" class="weathericon">
-            <div class="temp">Night - 20C</div>
-            <div class="temp">Day 40C</div>
-        </div>
-        <div class="weatherForecastItem">
-            <div class="day">Wednesday</div>
-            <img src="./" alt="weather icon" class="weathericon">
-            <div class="temp">Night - 20C</div>
-            <div class="temp">Day 40C</div>
-        </div>
-        <div class="weatherForecastItem">
-            <div class="day">Thursday</div>
-            <img src="./" alt="weather icon" class="weathericon">
-            <div class="temp">Night - 20C</div>
-            <div class="temp">Day 40C</div>
-        </div>
-        <div class="weatherForecastItem">
-            <div class="day">Friday</div>
-            <img src="./" alt="weather icon" class="weathericon">
-            <div class="temp">Night - 20C</div>
-            <div class="temp">Day 40C</div>
-        </div>
-        <div class="weatherForecastItem">
-            <div class="day">Saturday</div>
-            <img src="./" alt="weather icon" class="weathericon">
-            <div class="temp">Night - 20C</div>
-            <div class="temp">Day 40C</div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="./assets/js/index.js"></script>r
-
+    <div id="search-history" class="search-history">
+        <h2>Search History</h2>
     </div>
+    <!-- ! Current weather of the day -->
+    <div id="current-weather" class="current-weather">
+        <h2>Current Weather</h2>
+        <div id="currentCity"></div>
+        <div id="date" class="space"></div>
+        <div><img id="weatherIconCurrent" src=""></div>
+        <div id="temperature"></div>
+        <div id="humidity"></div>
+        <div id="wind-speed"></div>
+    </div>
+
+    <div id="forecast-weather" class="forecast-weather forecast-wrapper">
+        <h2>Forecast Weather for the next 5 days</h2>
+        <!-- ! day 1 of the weather -->
+        <div id="cityNameForecast"></div>
+        <div id="forecastDate-1" class="space"></div>
+        <div><img id="forecastIcon-1" src=""></div>
+        <div id="forecastTemperature-1"></div>
+        <div id="forecastHumidity-1"></div>
+        <div id="forecastWindSpeed-1"></div>
+        <!-- ! day 2 of the weather -->
+        <div id="forecastDate-2" class="space"></div>
+        <div><img id="forecastIcon-2" src=""></div>
+        <div id="forecastTemperature-2"></div>
+        <div id="forecastHumidity-2"></div>
+        <div id="forecastWindSpeed-2"></div>
+        <!-- ! day 3 of the weather -->
+        <div id="forecastDate-3" class="space"></div>
+        <div><img id="forecastIcon-3" src=""></div>
+        <div id="forecastTemperature-3"></div>
+        <div id="forecastHumidity-3"></div>
+        <div id="forecastWindSpeed-3"></div>
+        <!-- ! day 4 of the weather -->
+        <div id="forecastDate-4" class="space"></div>
+        <div><img id="forecastIcon-4" src=""></div>
+        <div id="forecastTemperature-4"></div>
+        <div id="forecastHumidity-4"></div>
+        <div id="forecastWindSpeed-4"></div>
+        <!-- ! day 5 of the weather -->
+        <div id="forecastDate-5" class="space"></div>
+        <div><img id="forecastIcon-5" src=""></div>
+        <div id="forecastTemperature-5"></div>
+        <div id="forecastHumidity-5"></div>
+        <div id="forecastWindSpeed-5"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

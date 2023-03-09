@@ -1,0 +1,85 @@
+
+
+.space {
+    margin: 15px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+/* Main frame */
+.current-weather {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+    background-color: #3ea1f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(28, 207, 139, 0.1);
+}
+.search-button {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Bottom frame */
+
+.forecast-wrapper {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    padding: 20px;
+    background-color: #cbd9e5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(227, 32, 32, 0.1);
+    margin-top: 20px;
+}
+
+/* Display the bottom frame divs after one another */
+.search-history {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forecast-wrapper {
+    margin-bottom: 40px;
+}
+
+/* Style for the forecast weather boxes */
+.forecast-box {
+    display: inline-block;
+    margin: 10px;
+    width: 18%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the forecast weather date */
+.forecast-date {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Style for the forecast weather icon */
+.forecast-icon {
+    margin-bottom: 10px;
+}
+
+/* Style for the forecast weather temperature */
+.forecast-temperature {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style for the forecast weather humidity */
+.forecast-humidity {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Style for the forecast weather wind speed */
+.forecast-wind-speed {
+    font-size: 14px;
+}
