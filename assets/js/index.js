@@ -22,3 +22,36 @@ function handleSearch() {
   getCurrentWeather(city);
   getWeatherForecast(city);
 }
+// ! When the document is ready, attach the handleSearch function to the search button click event
+$(document).ready(function () {
+  $("#search-button").click(handleSearch);
+});
+
+// ! This function fetches and displays the current weather for a given city
+async function getCurrentWeather(city) {
+  try {
+    // ! Make a GET request to the current weather API endpoint for the given city using the API key
+    const response = await fetch(`${API_CURRENT}?q=${city}&appid=${API_KEY}`);
+    // ! Parse the response data into a JSON object
+    const data = await response.json();
+    // ! Extract the weather data from the JSON object
+    const weather = data.weather[0];
+    const temp = data.main.temp - 273.15;
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
+    const date = new Date();
+    const iconUrl = `https://openweathermap.org/img/wn/${weather.icon}.png`;
+    // ! Update the HTML elements with the weather data
+    $("#currentCity").html(data.name);
+    $("#date").html(date.toDateString());
+    $("#weatherIconCurrent").attr("src", iconUrl);
+    $("#temperature").html(`Temperature: ${temp.toFixed(2)}°C`);
+    $("#humidity").html(`Humidity: ${humidity}%`);
+    $("#wind-speed").html(`Wind Speed: ${windSpeed} m/s`);
+  } catch (error) {
+    // ! If there is an error, display a message to the user
+    $("#current-weather").html(
+      "<h2>try again please the city was not found in the system. please check for grammar errors</h2>"
+    );
+  }
+}
