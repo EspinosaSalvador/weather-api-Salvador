@@ -35,15 +35,17 @@ the requirements to run this webpage are really low due that we are only using *
 
 ## Installation
 
-To install this project please proceed to my [GitHub Repository](https://github.com/EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez)
+To install this project please proceed to my [GitHub Repository](https://github.com/EspinosaSalvador/weather-api-Salvador)
+
+here is the webpage in [Github-Pages](https://espinosasalvador.github.io/weather-api-Salvador/)
 
 you should be able to see this,
 
-![Github Repository](./Assets/Img/Github%20Repository.png)
+![Github Repository](./assets/img/githubRepository.png)
 
 Click on code as shown in the image
 
-![Click on Code](./Assets/Img/SSH.png)
+![Click on Code](./assets/img/sshkey.png)
 
 Copy the SSH key or the HTTPS key and open.
 
@@ -54,7 +56,7 @@ Copy the SSH key or the HTTPS key and open.
 either one of this will work. please proceed to the terminal an put in your Terminal,
 
 ```
-git clone git@github.com:EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez.git
+git clone git@github.com:EspinosaSalvador/weather-api-Salvador.git
 ```
 
 and now you have a copy of the code.
@@ -73,15 +75,41 @@ switch branches putting the following code on your terminal.
 git checkout ＜branchname＞
 ```
 
-If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/Password-Generator--Salvador-Espinosa-Valdez/pulls).
+If you want to show us your code and merge please open a pull request on [Github](https://github.com/EspinosaSalvador/weather-api-Salvador/pulls).
 
-![Pull request](./Assets/Img/Pull%20request.png)
+![Pull request](./assets/img/pullrequest.png)
 
 ## What you should be able to see
 
 These is what you should be able to see in the Webpage,
-![Webpage](./Assets/Img/Webpage%20working.png)
+![Webpage](./assets/img/entering%20the%20page.png)
 
-Please proceed to click on Generate Password. an alert should pop up on your screen like this img
+Please proceed to text your city that you want to see the weather on. this will be on the top of the page. for this example I am going to use my hometown "Monterrey, MX"
 
-![Pop-up](./Assets/Img/generate%20password.png)
+![Search](./assets/img/Monterrey.png)
+
+you will see the information for the destination for the current time and the next five days with temperature, windspeed and humidity.
+
+Lets try another city
+
+![Cancun](./assets/img/Cancun.png)
+
+in cancun we have now new information but the important part is to see that we have everything saved on the search area that is above the current weather.
+
+![New York](./assets/img/new%20York.png)
+
+## Troubleshooting
+
+The Weather app is in version 1.0 ,please let me know if there are anybug in the webpage by issuing it in [Github](https://github.com/EspinosaSalvador/weather-api-Salvador/issues)
+
+## Next Phase Development
+
+This are will be updated depending on the feedback from the users.
+
+## FAQ (Frecuentrly Asked Questions)
+
+We will update this part when we have some frequently asked question.
+
+## Team
+
+* Salvador Espinosa Valdez
