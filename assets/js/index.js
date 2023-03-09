@@ -55,3 +55,40 @@ async function getCurrentWeather(city) {
     );
   }
 }
+// ! This function fetches and displays the weather forecast for a given city
+async function getWeatherForecast(city) {
+  try {
+    // ! Make a GET request to the weather forecast API endpoint for the given city using the API key
+    const response = await fetch(`${API_FORECAST}?q=${city}&appid=${API_KEY}`);
+    // ! Parse the response data into a JSON object
+    const data = await response.json();
+    // ! Update the HTML elements with the city name for the weather forecast
+    $("#cityNameForecast").html(data.city.name);
+    // ! Loop through the weather forecast data and update the HTML elements for each forecast
+    for (let i = 0; i < data.list.length; i += 8) {
+      // ! Extract data for each forecast
+      const forecast = data.list[i];
+      const forecastDate = new Date(forecast.dt * 1000);
+      // ! the icons were taken form openweathermap.org this is due that it was easier instead of taking other api and uploading it to this work
+      const forecastIconUrl = `https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+      const forecastTemp = (forecast.main.temp - 273.15).toFixed(2);
+      const forecastHumidity = forecast.main.humidity;
+      const forecastWindSpeed = forecast.wind.speed;
+      // ! Update HTML elements with forecast data
+      $(`#forecastDate-${i / 8 + 1}`).html(forecastDate.toDateString());
+      $(`#forecastIcon-${i / 8 + 1}`).attr("src", forecastIconUrl);
+      $(`#forecastTemperature-${i / 8 + 1}`).html(
+        `Temperature: ${forecastTemp}°C`
+      );
+      $(`#forecastHumidity-${i / 8 + 1}`).html(
+        `Humidity: ${forecastHumidity}%`
+      );
+      $(`#forecastWindSpeed-${i / 8 + 1}`).html(
+        `Wind Speed: ${forecastWindSpeed} m/s`
+      );
+    }
+    // ! If an error occurs, display an error message in the forecast element
+  } catch (error) {
+    $("#forecast").html("<h2>City not found</h2>");
+  }
+}
